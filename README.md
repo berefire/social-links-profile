@@ -47,7 +47,7 @@ Users should be able to:
 
 ### 🔗Links
 
-- Solution URL: []()
+- Solution URL: [https://www.frontendmentor.io/solutions/social-links-profile-card-cfRMIJSjNV](https://www.frontendmentor.io/solutions/social-links-profile-card-cfRMIJSjNV)
 - Live Site URL: [https://berefire.github.io/social-links-profile/](https://berefire.github.io/social-links-profile/)
 
 ## My process
