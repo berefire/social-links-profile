@@ -91,11 +91,12 @@ body {
 
 .profile-user {
     width: 100%;
-    max-width: 24rem;
+    max-width: 90vw;
     background-color: var(--grey-800);
-    padding: 2.25rem 1.5rem;
+    padding: 5vw 3vw;
     border-radius: 0.75rem;
     height: auto;
+    box-sizing: border-box;
 }
 
 .profile-user p {
@@ -187,7 +188,7 @@ body {
     text-decoration: underline;
 }
 
-@media (min-width: 768px){
+@media (min-width: 48rem){
     .profile-user {
         max-width: 24rem;
         padding: 2.5rem;
@@ -199,11 +200,26 @@ body {
 }
 
 @media (hover: hover) {
-    .profile-user__list:hover {
+    .profile-user__list {
+        position: relative
+    }
+
+    .profile-user__list::before {
+        content: "";
+        position: absolute;
+        inset: 0;
         background-color: var(--green);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    .profile-user__list:hover::before {
+        opacity: 1;
     }
 
     .profile-user__list:hover .profile-user__link {
-        color: var(--grey-900);
+        transition: text-shadow 0.3s ease;
     }
 }
