@@ -1,9 +1,64 @@
-html {
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./assets/fonts/inter-v20-latin-regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(./assets/fonts/inter-v20-latin-600.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(./assets/fonts/inter-v20-latin-700.woff2) format("woff2");
+}
+
+
+/* || RESET */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-*, *::before, *::after {
-    box-sizing: inherit;
+img,
+picture,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style-type: none;
 }
 
 :root {
@@ -15,13 +70,8 @@ html {
     --primary-blue: hsl(228, 45%, 44%);
 }
 
-body, h1, p {
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,16 +98,17 @@ body {
     height: auto;
 }
 
-.profile-user, p {
+.profile-user p {
     font-size: 0.875rem;
 }
 
 .profile-user__image {
     border-radius: 50%;
     object-fit: cover;
+    height: 5rem;
     width: 5rem;
-    margin-block-end: 1.75rem;
-    
+    margin-block-end: 1.5rem;
+    margin-inline: auto;
 }
 
 .profile-user__name {
@@ -78,41 +129,45 @@ body {
     color: var(--white);
     font-weight: 400;
     font-size: 0.875rem;
-    line-height: 1.5;
+    line-height: 1.45;
     padding-block-end: 1.75rem;
     opacity: 0.85;
 }
 
-.profile-user__buttons {
+
+.profile-user__socials {
+    margin: 0;
+    padding: 0;
     display: grid;
-    gap: 1rem;
+    gap: 1rem
 }
 
-.profile-user__button {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 700;
+.profile-user__list {
     background-color: var(--grey-700);
-    display: block;
-    width: 100%;
-    padding: 1rem;
     border-radius: 0.5rem;
-    font-size: 0.875rem;
-
     cursor: pointer;
 }
 
-.profile-user__button:hover {
+.profile-user__link {
+    display: block;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.875rem;
+    width: 100%;    
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+}
+
+.profile-user__link:hover {
     background-color: var(--green);
     color: var(--grey-800);
 }
 
-.profile-user__button:focus-visible {
+
+.profile-user__link:focus-visible {
     outline: 2px solid var(--green);
     outline-offset: 0.1875rem           ;
 }
-
-
 
 .attribution { 
     width: 100%;
@@ -141,15 +196,14 @@ body {
     .profile-user__name {
         font-size: 1.25rem;
     }
-
-    .profile-user__button {
-        padding: 0.95rem
-    }
 }
 
 @media (hover: hover) {
-    .profile-user__button:hover {
+    .profile-user__list:hover {
         background-color: var(--green);
+    }
+
+    .profile-user__list:hover .profile-user__link {
         color: var(--grey-900);
     }
 }
