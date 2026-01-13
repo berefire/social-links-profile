@@ -1,0 +1,22 @@
+.profile-user__list {
+  position: relative;
+}
+
+.profile-user__list::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--green);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.profile-user__list:hover::before {
+  opacity: 1;
+}
+
+.profile-user__list:hover .profile-user__link {
+  transition: text-shadow 0.3s ease;
+}

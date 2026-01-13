@@ -1,9 +1,10 @@
+/* || DECLARE INTER FONT */
 @font-face {
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(./assets/fonts/inter-v20-latin-regular.woff2) format("woff2");
+    src: url(../assets/fonts/inter-v20-latin-regular.woff2) format("woff2");
 }
 
 @font-face {
@@ -11,7 +12,7 @@
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url(./assets/fonts/inter-v20-latin-600.woff2) format("woff2");
+    src: url(../assets/fonts/inter-v20-latin-600.woff2) format("woff2");
 }
 
 @font-face {
@@ -19,7 +20,7 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(./assets/fonts/inter-v20-latin-700.woff2) format("woff2");
+    src: url(../assets/fonts/inter-v20-latin-700.woff2) format("woff2");
 }
 
 
@@ -33,22 +34,10 @@
     box-sizing: border-box;
 }
 
-img,
-picture,
-video {
+img {
     display: block;
     max-width: 100%;
     height: auto;
-}
-
-input,
-button,
-textarea,
-select {
-    font: inherit;
-    color: inherit;
-    background: none;
-    border-color: transparent;
 }
 
 a {
@@ -61,39 +50,47 @@ ol {
     list-style-type: none;
 }
 
+/* || VARIABLES */
 :root {
     --green: hsl(75, 94%, 57%);
     --white: hsl(0, 0%, 100%);
     --grey-700: hsl(0, 0%, 20%);
     --grey-800: hsl(0, 0%, 12%);
     --grey-900: hsl(0, 0%, 8%);
-    --primary-blue: hsl(228, 45%, 44%);
+    --primary-blue: #82D0F2;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--grey-900);
+}
+
+html,
+body {
+    height: 100%;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
-    min-height: 100svh;
-    background-color: var(--grey-900);
 }
 
 .layout {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    padding: clamp(1.2rem, 3vw, 1.5rem);
+    justify-content: center;
+    min-height: 94vh;
+    padding: 2rem 2rem;
 }
 
 .profile-user {
     width: 100%;
-    max-width: 90vw;
     background-color: var(--grey-800);
-    padding: 5vw 3vw;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
     border-radius: 0.75rem;
     height: auto;
     box-sizing: border-box;
@@ -106,9 +103,8 @@ body {
 .profile-user__image {
     border-radius: 50%;
     object-fit: cover;
-    height: 5rem;
-    width: 5rem;
-    margin-block-end: 1.5rem;
+    width: 5.5rem;
+    margin-block-end: 2rem;
     margin-inline: auto;
 }
 
@@ -116,13 +112,13 @@ body {
     color: var(--white);
     font-weight: 600;
     padding-block-end: 0.5rem;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
 }
 
 .profile-user__place {
     color: var(--green);
     font-weight: 600;
-    padding-block-end: 1.75rem;
+    padding-block-end: 1.7rem;
     font-size: 0.875rem;
 }
 
@@ -131,7 +127,7 @@ body {
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.45;
-    padding-block-end: 1.75rem;
+    padding-block-end: 1.5rem;
     opacity: 0.85;
 }
 
@@ -140,7 +136,7 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
-    gap: 1rem
+    gap: 1.2rem;
 }
 
 .profile-user__list {
@@ -180,46 +176,10 @@ body {
 }
 .attribution a { 
     color: var(--primary-blue); 
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .attribution a:hover,
 .attribution a:focus-visible {
     text-decoration: underline;
-}
-
-@media (min-width: 48rem){
-    .profile-user {
-        max-width: 24rem;
-        padding: 2.5rem;
-    }
-
-    .profile-user__name {
-        font-size: 1.25rem;
-    }
-}
-
-@media (hover: hover) {
-    .profile-user__list {
-        position: relative
-    }
-
-    .profile-user__list::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-color: var(--green);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        pointer-events: none;
-        z-index: -1;
-    }
-
-    .profile-user__list:hover::before {
-        opacity: 1;
-    }
-
-    .profile-user__list:hover .profile-user__link {
-        transition: text-shadow 0.3s ease;
-    }
 }
