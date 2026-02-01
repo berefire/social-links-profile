@@ -1,0 +1,43 @@
+:root {
+    /* Colors */
+    --color-white: hsl(0, 0%, 100%);
+    --color-bg: hsl(0, 0%, 8%);
+    --color-bg-secondary: hsl(0, 0%, 12%);
+    --color-bg-button: hsl(0, 0%, 20%);
+    --color-bg-state: hsl(75, 94%, 57%);
+    --color-link: #82D0F2;
+
+    /* Spacing scale */
+    --space-xs: 0.75rem;    /* 12px */
+    --space-s: 1rem;        /* 16px */
+    --space-m: 1.5rem;      /* 24px */
+    --space-xl: 2.5rem;     /* 40px */
+
+    /* Radius */
+    --radius-s: 0.5rem;   /* 8px */
+    --radius-m: 0.75rem;   /* 12px */
+
+    /* Font families */
+    --font-main: "Inter", sans-serif;
+
+    /* Font weights */
+    --weight-regular: 400;
+    --weight-semi-bold: 600;
+    --weight-bold: 700;
+
+    /* Font sizes */
+    --text-fixed-s: 0.875rem; /* 14px */
+    --text-fixed-l: 1.5rem;   /* 24px */
+
+    /* Line heights */
+    --leading-regular: 1.5; 
+
+    /* Card widths */
+    --card-max: 24rem;     /* 384px */
+    --card-min: 20.44rem;  /* 327px */
+
+    --card-fluid: clamp(var(--card-min), 90vw, var(--card-max));
+
+    /* Avatar width */
+    --avatar-size: 5.5rem; /* 88px */
+}

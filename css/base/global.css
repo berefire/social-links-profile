@@ -1,0 +1,17 @@
+html {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-white);
+    font-weight: var(--weight-regular);
+    font-size: var(--text-fixed-s);
+    -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+    min-block-size: 100%;
+}
+
+address {
+    display: inline;
+}

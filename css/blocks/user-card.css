@@ -1,0 +1,52 @@
+.profile-user {
+    width: 100%;
+    max-width: var(--card-fluid);
+}
+
+.profile-user__image {
+    display: inline-block;
+    inline-size: var(--avatar-size);
+    block-size: var(--avatar-size);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-user__name {
+    font-size: var(--text-fixed-l);
+    font-weight: var(--weight-semi-bold);
+}
+
+.profile-user__place {
+    color: var(--color-bg-state);
+    font-weight: var(--weight-bold);
+}
+
+
+
+.profile-user__list {
+    
+    border-radius: var(--radius-s);
+
+}
+
+.profile-user__link{
+    display: block;
+    background-color: var(--color-bg-button);
+    padding: var(--space-xs) var(--space-xs);
+    border-radius: var(--radius-s);
+    text-decoration: none;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.profile-user__link:hover {
+    background-color: var(--color-bg-state);
+    color: var(--color-bg-button);
+    font-weight: var(--weight-bold);
+}
+
+
+.profile-user__link:focus-visible {
+    outline: 2px solid var(--color-bg-state);
+    outline-offset: 0.1875rem;           
+}
