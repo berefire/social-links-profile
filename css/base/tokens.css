@@ -36,7 +36,7 @@
     --card-max: 24rem;     /* 384px */
     --card-min: 20.44rem;  /* 327px */
 
-    --card-fluid: clamp(var(--card-min), 90vw, var(--card-max));
+    --card-fluid: clamp(var(--card-min), min(100vw, 100%), var(--card-max));
 
     /* Avatar width */
     --avatar-size: 5.5rem; /* 88px */
