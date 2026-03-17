@@ -7,7 +7,6 @@
   display: inline-block;
   inline-size: var(--avatar-size);
   block-size: var(--avatar-size);
-  object-fit: cover;
   border-radius: 50%;
 }
 

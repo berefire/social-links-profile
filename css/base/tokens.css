@@ -6,6 +6,7 @@
     --color-bg-button: hsl(0, 0%, 20%);
     --color-bg-state: hsl(75, 94%, 57%);
     --color-link: #82D0F2;
+    --color-link-focus: #ffbf47;
 
     /* Spacing scale */
     --space-xs: 0.75rem;    /* 12px */
